@@ -95,11 +95,10 @@ public abstract class LoggingActivity extends AppCompatActivity {
 
     @Override
     protected void onStop() {
+        Log.d(mLogTag, "onStop");
         super.onStop();
         // Stop logging to UI when this activity is stopped.
         stopLogging();
-
-        Log.d(mLogTag, "onStop");
     }
 
     @Override
