@@ -16,16 +16,18 @@
 
 buildscript {
     repositories {
+        google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.2.1'
     }
 }
 
 allprojects {
     repositories {
+        google()
         jcenter()
     }
 }
@@ -58,9 +60,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0-beta1'
-    androidTestCompile 'com.android.support:support-annotations:24.0.0-beta1'
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:24.0.0-beta1'
+    androidTestImplementation 'com.android.support:support-annotations:24.0.0-beta1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.1'
 }
